@@ -111,23 +111,33 @@ In deep learning, different metrics are used to evaluate the performance of mode
     * F1 Score = 2 * ((precision * recall) / (precision + recall))
 
 5. **ROC-AUC**:
+    * ROC-AUC stands for Receiver Operation Characteristic - Area Under the Curve
     * Used for binary classification (different specialised versions can be used for multiclass classification)
     * We draw ROC curve as True positive rate (sensitivity or recall) vs False positive rate.
+    * False positive rate measures the proportion of false positive predictions out of all actual negative instances.
     * False positive rate = (False positive) / (False positive + True Negative)
     * The curve has True positive rate as y-axis and False positive rate as x-axis
     * For different threshold value points are plotted onto the graph.
-    * A threshold is a cut-off value that decided how the continous output of a model (often a probability score) is converted into a binary classification.
-    * The highest value for AUC is 1 (when model predict all correct value for any threshold i.e recall has a value of 1 for every threshold)
+    * In the context of ROC-AUC, a threshold is a value used to determine the cutoff point at which the model classifies an instance as belonging to the positive class or negative class.
+    * Recall and AUC are in direct corespondence, higher the Recall: higher the AUC, lower the Recall: lower the AUC.
     * Higher recall generally means a better model.
+    * The highest value for AUC is 1 (when model predict all correct value for any threshold i.e recall has a value of 1 for every threshold)
     * Higher AUC means that the model has higher recall value for different threshold. So, we can say that in general a model with higher AUC is better (but it can be case dependent)
 
-6. **Confusion Matric**:
+6. **Classification Report**:
     * It is a table that summarizes the performance of a classification model.
     * It contains different metrices:
         * Accuracy
         * Precision
         * Recall
         * F1 Score
+
+7. **Confusion Matrix**:
+    * A confusion matrix is a performance measurement tool for classification problems.
+    * It shows the number of correct and incorrect predictions made by a classifier, broken down by each class.
+    * The matrix helps visualize the performance of a classification model and can be used to compute various evaluation metrics like accuracy, precision, recall, and F1 score.
+
+NOTE: 'Precision', 'Recall', 'F1 Score' and 'ROC-AUC' are all metrices used for binary classification. To make them work for multiclass classification we will have to use averaging methods like macro-averaged or micro-averaged. 'Accuracy' and 'Confusion Matrix' can be used for both binary and multiclass classification.
 
 ### Regression Metrics
 
